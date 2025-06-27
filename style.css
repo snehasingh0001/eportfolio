@@ -11,17 +11,27 @@ body {
     line-height: 1.6;
     background: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background: linear-gradient(to right, #2c3e50, #3498db);
     color: white;
-    padding: 40px 0;
+    padding: 40px 20px;
     text-align: center;
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
 nav a {
-    margin: 0 20px;
+    margin: 10px 15px;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -40,21 +50,24 @@ nav a.active {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
 
 h1, h2 {
     margin-bottom: 20px;
     color: #2c3e50;
+    text-align: center;
 }
 
 ul {
     list-style: none;
+    padding-left: 0;
 }
 
 ul li {
     margin-bottom: 15px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 24px;
 }
 
 ul li::before {
@@ -62,6 +75,7 @@ ul li::before {
     color: #3498db;
     position: absolute;
     left: 0;
+    top: 0;
 }
 
 footer {
@@ -69,7 +83,6 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
 }
 
 a {
@@ -80,6 +93,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
 .btn {
     display: inline-block;
     background-color: #3498db;
@@ -95,3 +109,44 @@ a:hover {
     background-color: #2980b9;
 }
 
+/* -------------------------
+   Responsive Styles
+-------------------------- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 8px 0;
+    }
+
+    .container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        font-size: 0.95rem;
+    }
+}
