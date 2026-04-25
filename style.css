@@ -45,7 +45,7 @@ nav a.active {
 /* ===== Photo Section (Perfect Center Top) ===== */
 .photo-section {
     position: relative;
-    margin-top: -90px;        /* pulls image upward */
+    margin-top: -70px;        /* pulls image upward */
     display: flex;
     justify-content: center;
     align-items: center;
